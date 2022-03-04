@@ -7,4 +7,4 @@ First react app. Learning about file structure and state on class components.
 ## 🚀DEMO
 [Monsters](https://monsters-luisca.netlify.app/)
 ## 👀Preview
-![Screenshot](monsters-rolodex.png)
+![Screenshot](monsters-rolodex.jpeg)
