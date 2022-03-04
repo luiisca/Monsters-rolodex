@@ -25,10 +25,13 @@ class App extends Component {
   }
 
   render() {
+    let { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()));
+
     return (
       <div className="App">
         <input type="search" placeholder="search monster" onChange={(e) => this.setState({searchField:  e.target.value})} />
-        <CardsList monsters={this.state.monsters} />
+        <CardsList monsters={filteredMonsters} />
         <button onClick={() => this.setState({count: ++this.state.count})}>Count {this.state.count}</button>
       </div>
     )
