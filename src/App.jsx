@@ -25,15 +25,18 @@ class App extends Component {
     // console.log('App componentDidUpdate')
   }
 
+  handleChange = (e) => this.setState({searchField:  e.target.value})
+  
   render() {
     let { monsters, searchField } = this.state;
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()));
 
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox 
           placeholder="search monster"
-          handler={(e) => this.setState({searchField:  e.target.value})}
+          handler={this.handleChange}
         />
         <CardsList monsters={filteredMonsters} />
         <button onClick={() => this.setState({count: ++this.state.count})}>Count {this.state.count}</button>

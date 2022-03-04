@@ -40,3 +40,10 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+h1 {
+  font-family: 'Bigelow Rules';
+  font-size: 82px;
+  color: #0ccac4;
+  letter-spacing: 3px;
+}
